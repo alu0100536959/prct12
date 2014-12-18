@@ -20,18 +20,18 @@ class Arbol_N
 	
 	if @se_puede_recolectar == true
 	   @count_naranjas = @count_naranjas - 1
-	   puts "Mmmmmmm Deliciosa, te quedan #{@count_naranjas} todavia.\n"
+	   puts " te has comido una naranja te quedan #{@count_naranjas} todavia.\n"
 	else
-	   puts "Ups!!Lo siento no hay naranjas\n"
+	   puts "Se han acabado las naranjas\n"
 	end
     end
     
     def uno_mas
         if @arbol_muerto == false
 	   @edad = @edad + 1 #la edad se incrementa de 1 en 1
-	   puts "AUMENTANDO ANIOS,  Ahora tiene #{@edad} anios\n"
+	   puts "Ha transcurrido un anio,  Ahora tiene #{@edad} anios\n"
 	   @altura = @altura + 2 #la altura se incrementa en 2 unidades
-	   puts "CRECIENDO, Ahora tiene #{@altura} metros\n"
+	   puts "Ha crecido el arbol, Ahora tiene #{@altura} metros\n"
 	   if @edad < 2
 	      @count_naranjas = @count_naranjas + 5
 	   end
@@ -39,9 +39,9 @@ class Arbol_N
 	      @count_naranjas = @count_naranjas + 10
 	   end
 	   if @edad > 7 #muere el arbol cuando es mayor de 7 años
-	      puts "**************************************"
-	      puts "Oooooh no el Arbol a MUERTO!!\n"
-	      puts "**************************************"
+	      puts "********************"
+	      puts "El arbol a muerto\n"
+	      puts "********************"
 	      @arbol_muerto = true
 	      @count_naranjas = 0
 	   end
