@@ -28,9 +28,9 @@ class Arbol_N
     
     def uno_mas
         if @arbol_muerto == false
-	   @edad = @edad + 1 #la edad se va aumentando de uno en uno
+	   @edad = @edad + 1 #la edad se incrementa de 1 en 1
 	   puts "AUMENTANDO ANIOS,  Ahora tiene #{@edad} anios\n"
-	   @altura = @altura + 2 #la altura se va aumentando en 2
+	   @altura = @altura + 2 #la altura se incrementa en 2 unidades
 	   puts "CRECIENDO, Ahora tiene #{@altura} metros\n"
 	   if @edad < 2
 	      @count_naranjas = @count_naranjas + 5
@@ -38,7 +38,7 @@ class Arbol_N
 	   if @edad >= 2 #si el arbol tiene 2 años o mas produce mas
 	      @count_naranjas = @count_naranjas + 10
 	   end
-	   if @edad > 7 #si el arbol llega a los 10 años muere
+	   if @edad > 7 #muere el arbol cuando es mayor de 7 años
 	      puts "**************************************"
 	      puts "Oooooh no el Arbol a MUERTO!!\n"
 	      puts "**************************************"
@@ -71,7 +71,6 @@ class Arbol_N
     
 end #fin de la clase
 
-######################################################################################################################################## 
 end#fin del modulo
 
 if __FILE__ == $0 then #si se utiliza desde un require estas lineas no se ejecutan pero si lo ejecutamos en consola funciona para ejecutar 
